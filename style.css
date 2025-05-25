@@ -65,6 +65,7 @@ body {
 .profile-left {
   flex: 1 1 300px;
   min-width: 250px;
+  text-align: center; /* 가운데 정렬 추가 */
 }
 .profile-img {
   margin-bottom: 1rem;
