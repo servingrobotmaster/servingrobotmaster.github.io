@@ -1,208 +1,213 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Geonkuk Kim - CV / Portfolio</title>
-  <!-- 폰트어썸 아이콘 (필요시) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geonkuk Kim</title>
+
+  <!-- 폰트어썸(아이콘) CDN: 필요없다면 삭제 -->
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     integrity="sha512-..."
     crossorigin="anonymous"
   />
-  <!-- 내 CSS -->
-  <link rel="stylesheet" href="css/style.css" />
-</head>
 
+  <!-- 내 CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-  <!-- 상단 네비게이션 -->
+  <!-- ===== 상단 네비게이션 ===== -->
   <header class="navbar">
-    <nav>
-      <ul>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experiences">Experiences</a></li>
-        <li><a href="#conferences">Conferences</a></li>
-        <li><a href="#awards">Awards & Honors</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills & Techniques</a></li>
-        <li><a href="#activities">Activities</a></li>
-      </ul>
-    </nav>
+    <div class="nav-wrapper">
+      <!-- 왼쪽 상단 로고/이름 자리에 텍스트나 로고를 넣어도 됨 -->
+      <div class="nav-left">
+        <a href="#">Geonkuk Kim</a>
+      </div>
+      <!-- 메뉴 링크들 -->
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#conferences">Conferences</a></li>
+          <li><a href="#awards">Awards & Honors</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills & Techniques</a></li>
+          <li><a href="#activities">Activities</a></li>
+        </ul>
+      </nav>
+    </div>
+    <hr class="nav-underline">
   </header>
 
-  <!-- 프로필 섹션 -->
+  <!-- ===== 메인 섹션 (프로필 사진 + 간단 소개 + Contact/Education 카드) ===== -->
   <section class="profile-section">
-    <div class="profile-img">
-      <!-- 프로필 사진: 실제로는 images/ 폴더에 넣고 경로 수정하세요 -->
-      <img src="https://via.placeholder.com/200" alt="Profile Photo" />
-    </div>
-    <div class="profile-info">
-      <h1>Geonkuk Kim</h1>
-      <p class="position">Master Student, Korea University</p>
-      <p>
-        <strong>Email:</strong> <a href="mailto:ggk0929@gmail.com">ggk0929@gmail.com</a><br />
-        <strong>Tel:</strong> +82-10-9354-8472
-      </p>
-      <p class="intro">
-        Currently pursuing a Master’s degree in Mechanical Engineering at Korea University.<br/>
+    <!-- 왼쪽 칸: 프로필 이미지와 간단 소개 -->
+    <div class="profile-left">
+      <div class="profile-img">
+        <!-- 실제 프로필 사진 경로를 아래 src에 넣으세요 -->
+        <img src="https://via.placeholder.com/200" alt="Profile Photo">
+      </div>
+      <h1 class="profile-name">Geonkuk Kim</h1>
+      <p class="profile-position">Master Student, Korea University</p>
+      <p class="profile-intro">
+        Currently pursuing a Master’s degree in Mechanical Engineering at Korea University.
         Research interests include robotics (vision-based manipulation, affordance learning), deep learning, and more.
       </p>
-      <!-- 필요시 추가 링크 (CV PDF, GitHub, LinkedIn 등) -->
-      <!-- <p class="profile-links">
-        <a href="#"><i class="fas fa-file"></i> Download CV</a>
-        <a href="#"><i class="fab fa-github"></i> GitHub</a>
-      </p> -->
+    </div>
+
+    <!-- 오른쪽 칸: Contact & Education 카드 -->
+    <div class="profile-right">
+      <!-- Contact -->
+      <div class="info-card">
+        <h2>Contact</h2>
+        <hr />
+        <p><strong>Email:</strong> <a href="mailto:ggk0929@gmail.com">ggk0929@gmail.com</a></p>
+        <p><strong>Tel:</strong> +82-10-9354-8472</p>
+      </div>
+
+      <!-- Education (요약) -->
+      <div class="info-card">
+        <h2>Education</h2>
+        <hr />
+        <p>
+          <strong>Korea University, Seoul, Korea</strong> (Feb. 2024 – Present)<br>
+          M.S. in Mechanical Engineering<br>
+          GPA: 3.5 / 4.5<br>
+          Thesis: Task Conditional Affordance Generation for Robotic Manipulation
+        </p>
+        <p>
+          <strong>Seoul National University of Science and Technology</strong> (Mar. 2018 – Feb. 2024)<br>
+          B.S. in Mechanical and Automotive Engineering<br>
+          GPA: 4.0 / 4.5<br>
+          Thesis: Methodology for Fine-Tuning an Affordance Model Based on Video Data for Harvesting Robots
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- Education -->
+  <!-- ===== 아래쪽 상세 섹션들 ===== -->
+  <!-- Education 세부 내용(전체) 보이길 원하시면 여기에 별도 섹션 생성 가능 -->
   <section id="education" class="content-section">
     <h2>Education</h2>
-    <div class="subsection">
-      <h3>Korea University, Seoul, Korea <span>(Feb. 2024 – Present)</span></h3>
-      <p><strong>Department of Mechanical Engineering</strong><br/>
-      Master Student<br/>
-      GPA: 3.5 / 4.5<br/>
-      <em>Thesis: Task Conditional Affordance Generation for Robotic Manipulation</em><br/>
-      <em>Co-advisor: Prof. Shinsuk Park; Advisor: Dr. Juyoun Park</em></p>
-    </div>
-
-    <div class="subsection">
-      <h3>Seoul National University of Science and Technology, Seoul, Korea <span>(Mar. 2018 – Feb. 2024)</span></h3>
-      <p><strong>Department of Mechanical and Automotive Engineering</strong><br/>
-      B.S. in Mechanical and Automotive Engineering<br/>
-      GPA: 4.0 / 4.5<br/>
-      <em>Thesis: Methodology for Fine-Tuning an Affordance Model Based on Video Data for Harvesting Robots and Its Usage in ROS Environment</em><br/>
-      <em>Advisor: Prof. Jinhyun Kim</em></p>
-    </div>
+    <hr />
+    <p><strong>Korea University, Seoul, Korea (Feb. 2024 – Present)</strong><br>
+      Department of Mechanical Engineering<br>
+      Master Student<br>
+      GPA: 3.5 / 4.5<br>
+      <em>Thesis: Task Conditional Affordance Generation for Robotic Manipulation</em><br>
+      <em>Co-advisor: Prof. Shinsuk Park; Advisor: Dr. Juyoun Park</em>
+    </p>
+    <br>
+    <p><strong>Seoul National University of Science and Technology, Seoul, Korea (Mar. 2018 – Feb. 2024)</strong><br>
+      Department of Mechanical and Automotive Engineering<br>
+      B.S. in Mechanical and Automotive Engineering<br>
+      GPA: 4.0 / 4.5<br>
+      <em>Thesis: Methodology for Fine-Tuning an Affordance Model Based on Video Data for Harvesting Robots and Its Usage in ROS Environment</em><br>
+      <em>Advisor: Prof. Jinhyun Kim</em>
+    </p>
   </section>
 
-  <!-- Experiences -->
   <section id="experiences" class="content-section">
     <h2>Experiences</h2>
+    <hr />
     <ul>
       <li>
-        <strong>Research Student</strong>, Korea Institute of Science and Technology (Feb. 2024 – Present)<br/>
+        <strong>Research Student</strong>, Korea Institute of Science and Technology (Feb. 2024 – Present)<br>
         <em>Context-aware Affordance learning for robotic manipulation</em>
       </li>
       <li>
-        <strong>Research Intern</strong>, Korea Institute of Science and Technology (Sep. 2023 – Feb. 2024)<br/>
+        <strong>Research Intern</strong>, Korea Institute of Science and Technology (Sep. 2023 – Feb. 2024)<br>
         <em>Development of Visual Affordance Model for Harvesting Apple Tasks</em>
       </li>
       <li>
-        <strong>Research Student</strong>, Seoul National University of Science and Technology (Jun. 2022 – Jun. 2023)<br/>
+        <strong>Research Student</strong>, Seoul National University of Science and Technology (Jun. 2022 – Jun. 2023)<br>
         <em>Development of Manipulator Control System Using VR devices</em>
       </li>
       <li>
-        <strong>Military Service</strong>, The 8th Corps, Republic of Korea Army (Mar. 2020 – Sep. 2021)<br/>
-        <em>Served as a Personnel Administration Clerk, managing personnel affairs for a unit of 400 personnel.</em>
+        <strong>Military Service</strong>, The 8th Corps, Republic of Korea Army (Mar. 2020 – Sep. 2021)<br>
+        <em>Served as a Personnel Administration Clerk: Responsible for managing personnel affairs for a unit of 400 personnel.</em>
       </li>
     </ul>
   </section>
 
-  <!-- Conferences -->
   <section id="conferences" class="content-section">
     <h2>Conferences</h2>
+    <hr />
     <ul>
-      <li>
-        (Accepted) <strong>G. Kim</strong>, T. Choi, S. Park, J. Park, 
+      <li>(Accepted) <strong>G. Kim</strong>, T. Choi, S. Park, J. Park, 
         <em>“CAG: Context Conditional Affordance Generation”</em>, 
-        IEEE International Conference on Image Processing (ICIP 2025), Alaska, United States (Sep. 2025) -- Refereed Conference paper
+        IEEE ICIP 2025, Alaska, USA (Sep. 2025) – Refereed paper
       </li>
-      <li>
-        <strong>G. Kim</strong>, T. Choi, J. Park, 
+      <li><strong>G. Kim</strong>, T. Choi, J. Park, 
         <em>“VC-2AG: Verb-Conditional 2D Affordance Generation for Robotic Manipulation”</em>, 
-        The 12th International Conference on Robot Intelligence Technology and Applications (RiTA 2024), Ulsan, Korea (Dec. 2024) -- Conference paper
+        RiTA 2024, Ulsan, Korea (Dec. 2024)
       </li>
-      <li>
-        <strong>G. Kim</strong>, J. Park, 
-        <em>“Visual Affordance Model for Apple Harvesting Based on Hybrid Egocentric Dataset Collection”</em>, 
-        International Conference of Robotics and Automation (ICRA 2024), Yokohama, Japan (May. 2024) -- Poster
+      <li><strong>G. Kim</strong>, J. Park, 
+        <em>“Visual Affordance Model for Apple Harvesting…”</em>, 
+        ICRA 2024, Yokohama, Japan (May. 2024)
       </li>
-      <li>
-        <strong>G. Kim</strong>, J. Park, 
+      <li><strong>G. Kim</strong>, J. Park, 
         <em>“VLM(Visual-Language Model) Technology in Robot Manipulation”</em>, 
-        Institute of Control, Robotics and Systems, Daejeon, Korea (Feb. 2024) -- Conference paper
+        ICRS, Daejeon, Korea (Feb. 2024)
       </li>
-      <li>
-        <strong>G. Kim</strong>, J. Park, 
-        <em>“Building a Dataset and Fine-Tuning for an Affordance Model based on Video Data for Harvesting Robots”</em>, 
-        Korea Robotics Society Annual Conference (KRoC 2024), PyeongChang, Korea (Feb. 2024) -- Poster
+      <li><strong>G. Kim</strong>, J. Park, 
+        <em>“Building a Dataset and Fine-Tuning for an Affordance Model…”</em>, 
+        KRoC 2024, PyeongChang, Korea (Feb. 2024)
       </li>
     </ul>
   </section>
 
-  <!-- Awards & Honors -->
   <section id="awards" class="content-section">
     <h2>Awards & Honors</h2>
+    <hr />
     <ul>
-      <li>Campus Patent Universiade -- Samsung Electro Mechanics CEO Award, Korea (Nov. 2023)</li>
-      <li>Campus Patent Universiade -- LG Display CEO Award, Korea (Nov. 2022)</li>
-      <li>Campus Patent Universiade -- Korea Invention Promotion Association President’s Award, Korea (Nov. 2021)</li>
-      <li>SeoulTech Startup Contest Silver Prize, Seoul National University of Science and Technology (Dec. 2019)</li>
-      <li>SeoulTech Product Contest, Seoul National University of Science and Technology (Dec. 2019)</li>
+      <li>Campus Patent Universiade – Samsung Electro Mechanics CEO Award (Nov. 2023)</li>
+      <li>Campus Patent Universiade – LG Display CEO Award (Nov. 2022)</li>
+      <li>Campus Patent Universiade – Korea Invention Promotion Association President’s Award (Nov. 2021)</li>
+      <li>SeoulTech Startup Contest Silver Prize (Dec. 2019)</li>
+      <li>SeoulTech Product Contest (Dec. 2019)</li>
       <li>SeouTech Campus Creative Invention Contest Bronze Award (May. 2019)</li>
       <li>SeoulTech Campus Creative Invention Contest Silver Award (May. 2018)</li>
     </ul>
   </section>
 
-  <!-- Projects -->
   <section id="projects" class="content-section">
     <h2>Projects</h2>
+    <hr />
     <ul>
-      <li>
-        <strong>MOTIE Research Project</strong>:  
-        Performing the artificial human task of continuous growth of embodied intelligence through the accumulation and sharing of interactive experiences 
-        <span>(Jan. 2025 – Present)</span>
-      </li>
-      <li>
-        <strong>Side Research Project</strong>:  
-        Robot motion control using multi-function sensors (KIST) / Yolo model-based control 
-        <span>(Sep. 2024 – Present)</span>
-      </li>
-      <li>
-        <strong>MOTIE Research Project</strong>: 
-        Development of Robot Hand Tactile Intelligence Technology Based on Tactile Data Learning for Non-Rigid and Diverse Object Manipulation (KIST)
-        <span>(Mar. 2024 – Mar. 2025)</span>
-      </li>
+      <li><strong>MOTIE Research Project</strong> (Jan. 2025 – Present): Performing the artificial human task of continuous growth of embodied intelligence</li>
+      <li><strong>Side Research Project</strong> (Sep. 2024 – Present): Robot motion control using multi-function sensors, Yolo model (KIST)</li>
+      <li><strong>MOTIE Research Project</strong> (Mar. 2024 – Mar. 2025): Development of Robot Hand Tactile Intelligence Technology Based on Tactile Data Learning (KIST)</li>
     </ul>
   </section>
 
-  <!-- Skills & Techniques -->
   <section id="skills" class="content-section">
     <h2>Skills & Techniques</h2>
+    <hr />
     <ul>
-      <li><strong>Technical/Operations:</strong> Robotics (ROS1, ROS2), Manufacturing (2D/3D CAD), Simulation (Unity, Gazebo, O3DE), Hardware (Franka Emika, G1 Unitree)</li>
+      <li><strong>Technical/Operations:</strong> Robotics (ROS1, ROS2), CAD (2D/3D), Simulation (Unity, Gazebo, O3DE), Hardware (Franka Emika, G1 Unitree)</li>
       <li><strong>Machine Learning / AI & Programming:</strong> ML, DL, NLP, C#, Python, Matlab</li>
-      <li><strong>International:</strong> Intermediate in English (OPIC Intermediate High), developing Japanese understanding</li>
+      <li><strong>International:</strong> Intermediate in English (OPIC IH), developing Japanese understanding</li>
       <li><strong>Advantages:</strong> Excellent team collaboration and goal-oriented approach</li>
     </ul>
   </section>
 
-  <!-- Extracurricular Activities -->
   <section id="activities" class="content-section">
-    <h2>Extracurricular Activities</h2>
+    <h2>Activities</h2>
+    <hr />
     <ul>
-      <li>
-        <strong>Young Intellectual Property Leaders (YIPL)</strong> 
-        (Nov. 2021 – Present)  
+      <li><strong>Young Intellectual Property Leaders (YIPL)</strong> (Nov. 2021 – Present):
         Organized by The National Academy of Engineering of Korea & Korea Invention Promotion Association
       </li>
-      <li>
-        <strong>Invention and Development Research Society</strong> 
-        (Mar. 2018 – 2024)  
-        Weekly idea meetings, volunteering in science fields, participation in national idea competitions, on-campus prototype contests
+      <li><strong>Invention and Development Research Society</strong> (Mar. 2018 – 2024):
+        Weekly idea meetings, volunteering in science fields, idea competitions, etc.
       </li>
-      <li>
-        <strong>English Conversation Club</strong> 
-        (Mar. 2018 – 2019)  
+      <li><strong>English Conversation Club</strong> (Mar. 2018 – 2019):
         Cultural and language exchange with exchange students
       </li>
-      <li>
-        <strong>Running Crew Club</strong> 
-        (Mar. 2018 – 2019)  
-        Weekly running activities, participation in marathons
+      <li><strong>Running Crew Club</strong> (Mar. 2018 – 2019):
+        Weekly running activities, marathon participation
       </li>
     </ul>
   </section>
