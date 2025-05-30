@@ -75,6 +75,11 @@ code, pre, kbd, samp {
 .content-section li{margin-bottom:1rem;}
 .content-section p{margin-bottom:.5rem;}
 
+/* Experiences 날짜 우측 정렬 */
+.experiences-list li{display:flex;justify-content:space-between;flex-wrap:wrap;margin-bottom:1rem;}
+.experiences-list .desc{max-width:70%;}
+.experiences-list .date{white-space:nowrap;font-weight:600;color:#666;margin-left:auto;}
+
 /* HARILAB 링크 파란색 */
 .harilab-link{color:#007bff;text-decoration:none;font-weight:600;}
 .harilab-link:hover{text-decoration:underline;}
