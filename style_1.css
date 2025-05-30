@@ -50,15 +50,15 @@ code, pre, kbd, samp {
 .profile-position{font-size:1.1rem;color:#666;margin-bottom:.75rem;}
 .profile-intro{margin-bottom:1rem;line-height:1.5;}
 
-.profile-right{flex:1 1 500px;min-width:300px;display:flex;flex-direction:column;gap:1rem;}
+.profile-right{flex:1 1 500px;min-width:500px;display:flex;flex-direction:column;gap:1rem;}
 /* .info-card{padding:1rem;}
 .info-card h2{margin-bottom:.5rem;font-weight:bold;}
 .info-card hr{border:0;border-bottom:1px solid #ddd;margin-bottom:.5rem;} */
 .info-row{display:flex;gap:1rem;flex-wrap:wrap;}
 .info-row .info-card{
-  flex:1 1 300px;              /* 두 카드가 같은 행에 있도록 최소폭 ↑ */
+  flex:1 1 500px;              /* 두 카드가 같은 행에 있도록 최소폭 ↑ */
   background:#fff;border-radius:6px;
-  box-shadow:0 1px 4px rgba(0,0,0,.1);padding:1rem;
+/*   box-shadow:0 1px 4px rgba(0,0,0,.1);padding:1rem; */
 }
 .info-card h2{margin-bottom:.5rem;font-weight:700;}
 .info-card hr{border:0;border-bottom:1px solid #ddd;margin-bottom:.5rem;}
