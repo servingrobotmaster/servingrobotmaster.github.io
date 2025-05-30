@@ -37,9 +37,10 @@ code, pre, kbd, samp {
 .nav-underline{border:0;border-bottom:1px solid #ddd;margin-top:.4rem;}
 
 /* ───────── 프로필 영역 ───────── */
+/* max-width 수정으로 영역 길이 수정하는거  */
 .profile-section{
   display:flex;flex-wrap:wrap;gap:1.5rem;
-  max-width:1100px;margin:1.5rem auto;padding:0 1rem;
+  max-width:1300px;margin:1.5rem auto;padding:0 1rem;
 }
 .profile-left{flex:1 1 300px;min-width:250px;text-align:center;}
 .profile-img img{
@@ -49,7 +50,7 @@ code, pre, kbd, samp {
 .profile-position{font-size:1.1rem;color:#666;margin-bottom:.75rem;}
 .profile-intro{margin-bottom:1rem;line-height:1.5;}
 
-.profile-right{flex:1 1 300px;min-width:250px;display:flex;flex-direction:column;gap:1rem;}
+.profile-right{flex:1 1 500px;min-width:300px;display:flex;flex-direction:column;gap:1rem;}
 .info-card{padding:1rem;}
 .info-card h2{margin-bottom:.5rem;font-weight:bold;}
 .info-card hr{border:0;border-bottom:1px solid #ddd;margin-bottom:.5rem;}
