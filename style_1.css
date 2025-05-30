@@ -40,7 +40,7 @@ code, pre, kbd, samp {
 /* max-width 수정으로 영역 길이 수정하는거  */
 .profile-section{
   display:flex;flex-wrap:wrap;gap:1.5rem;
-  max-width:1300px;margin:1.5rem auto;padding:0 1rem;
+  max-width:1800px;margin:1.5rem auto;padding:0 1rem;
 }
 .profile-left{flex:1 1 300px;min-width:250px;text-align:center;}
 .profile-img img{
