@@ -1,7 +1,13 @@
 /* ───────── 공통 설정 ───────── */
 html { scroll-behavior: smooth; }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
 
 /* 본문 기본 서체 */
 body {
