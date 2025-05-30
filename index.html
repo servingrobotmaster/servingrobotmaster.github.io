@@ -3,447 +3,193 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geonkuk Kim</title>
+  <title>Geonkuk Kim – Academic Profile</title>
 
-  <!-- 아이콘 CDN -->
-<!--   <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-…" crossorigin="anonymous"/> -->
+  <!-- 아이콘 & 글꼴 -->
   <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7C
-                Roboto:400,400italic,700%7C
-                Roboto+Mono&display=swap">
-  <!-- 메인 CSS -->
-  <link rel="stylesheet" href="style_1.css">
-    <style>
-      * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: 'Roboto', sans-serif;
-      }
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
-      body {
-          line-height: 1.6;
-          color: #333;
-      }
+  <!-- ===== 동일 스타일 시트 (수정 無) ===== -->
+  <style>
+    /* —— 전역 —— */
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
+    body{line-height:1.6;color:#333;}
+    a{text-decoration:none;color:#b39b6f;}
+    a:hover{color:#453836;}
 
-      .header {
-          background: #453836;
-          padding: 1rem 2rem;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-          position: fixed;
-          width: 100%;
-          top: 0;
-          z-index: 1000;
-      }
+    /* —— 헤더(고정) —— */
+    .header{background:#453836;padding:1rem 2rem;box-shadow:0 2px 4px rgba(0,0,0,.1);
+            position:fixed;top:0;width:100%;z-index:1000;}
+    .nav{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;}
+    .nav-title{font-size:1.5rem;font-weight:700;color:#fff;}
+    .nav-links{display:flex;gap:2rem;}
+    .nav-links a{color:#fff;}
+    .nav-links a:hover,.nav-links a.active{color:#cfb382;}
 
-      .nav {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          max-width: 1200px;
-          margin: 0 auto;
-      }
+    /* —— 메인(그리드) —— */
+    .main-content{max-width:1200px;margin:100px auto 0;padding:2rem;
+                  display:grid;grid-template-columns:300px 1fr;gap:3rem;}
+    @media(max-width:768px){.main-content{grid-template-columns:1fr}.nav-links{display:none}}
 
-      .nav-title {
-          font-size: 1.5rem;
-          font-weight: bold;
-          color: white
-      }
+    /* —— 프로필 카드 —— */
+    .profile-section{text-align:center;}
+    .profile-image{width:250px;height:250px;border-radius:50%;object-fit:cover;margin-bottom:1rem;}
+    .profile-name{font-size:2rem;margin-bottom:.5rem;}
+    .profile-title{color:#666;margin-bottom:1rem;}
+    .profile-links{display:flex;justify-content:center;gap:1rem;margin-top:1rem;}
+    .profile-links i{font-size:2.25rem;margin-right:.5rem;}
 
-      .nav-links {
-          display: flex;
-          gap: 2rem;
-      }
+    /* —— 일반 콘텐츠 —— */
+    .content-section{padding-right:2rem;}
+    .section{margin-bottom:2rem;}
+    .section-title{font-size:1.5rem;margin-bottom:1rem;color:#333;}
 
-      .nav-links a {
-          text-decoration: none;
-          color: white;
-      }
+    /* Contact + Education (나란히) */
+    .container{display:flex;gap:1rem;align-items:flex-start;}
+    .contact-info{flex:1.3}
+    .education{flex:1.7}
+    .contact-list,.education-list{list-style:none;padding:0;margin:0;}
+    .contact-list li,.education-list li{display:flex;align-items:center;margin-bottom:.8rem;}
+    .contact-list i,.education-list .icon{font-size:1.2rem;margin-right:.5rem;color:#333}
+    .education-list .details{line-height:1.4;}
 
-      .nav-links a:hover {
-          color: #cfb382;
-      }
+    /* News · Experiences · Awards 등의 공통 레이아웃 */
+    .record-list{list-style:none;padding-left:0;margin-left:.5rem;}
+    .record-list li{margin-bottom:.7rem;}
 
-      .nav-links a.active {
-          color: #cfb382;
-      }
+    /* Experiences 날짜 우측 정렬 */
+    .experiences-list li{display:flex;justify-content:space-between;flex-wrap:wrap;margin-bottom:.7rem;}
+    .experiences-list .desc{max-width:75%;}
+    .experiences-list .date{white-space:nowrap;color:#666;font-weight:600;}
 
-      .main-content {
-          max-width: 1200px;
-          margin: 100px auto 0;
-          padding: 2rem;
-          display: grid;
-          grid-template-columns: 300px 1fr;
-          gap: 3rem;
-      }
-
-      .profile-section {
-          text-align: center;
-      }
-
-      .profile-image {
-          width: 250px;
-          height: 250px;
-          border-radius: 50%;
-          object-fit: cover;
-          margin-bottom: 1rem;
-      }
-
-      .profile-name {
-          font-size: 2rem;
-          margin-bottom: 0.5rem;
-      }
-
-      .profile-title {
-          color: #666;
-          margin-bottom: 1rem;
-      }
-
-      .profile-links {
-          display: flex;
-          justify-content: center;
-          gap: 1rem;
-          margin-top: 1rem;
-      }
-
-      .profile-links a {
-          color: #b39b6f;
-          text-decoration: none;
-      }
-
-      .profile-links a i {
-          font-size: 2.25rem;
-          margin-right: 0.5rem;
-      }
-
-      .content-section {
-          padding-right: 2rem;
-      }
-
-      .section {
-          margin-bottom: 2rem;
-      }
-
-      .section-title {
-          font-size: 1.5rem;
-          margin-bottom: 1rem;
-          color: #333;
-      }
-
-      .contact-info {
-          flex:1.3;
-      }
-
-      .contact-item {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          margin-bottom: 0.5rem;
-      }
-      .education-list,
-      .contact-list {
-        list-style: none; 
-        padding: 0;
-        margin: 0;
-      }
-      
-      .education-list li,
-      .contact-list li {
-        display: flex; /* 아이콘/이모지와 텍스트를 가로로 배치 */
-        align-items: center;
-        margin-bottom: 0.8rem; /* 각 항목 간 간격 */
-      }
-      
-      .education-list li .icon {
-        font-size: 1.2rem;
-        margin-right: 0.5rem;
-      }
-      
-      .education-list li .details {
-        line-height: 1.4;
-      }
-      
-      .contact-list li i {
-        margin-right: 0.5rem;
-        font-size: 1.2rem;
-        color: #333; /* 아이콘 색상 */
-      }
-      
-      .contact-list li span {
-        line-height: 1.4;
-      }
-      .container {
-          display: flex;
-          gap: 1rem; /* 섹션 사이 간격 */
-          align-items: flex-start;
-      }
-      
-      /* Education 및 Contact 섹션에 동일한 폭을 부여할 수 있음 */
-      .education {
-          flex: 1.7; /* Education 섹션이 더 넓은 공간을 차지합니다. */
-          }
-          
-      .education-list,
-      .contact-list {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-      }
-      a {
-          text-decoration: none; 
-          color: #b39b6f; 
-      }
-      
-      a:hover {
-          color: #453836;
-      }
-
-
-      @media (max-width: 768px) {
-          .main-content {
-              grid-template-columns: 1fr;
-          }
-          
-          .nav-links {
-              display: none;
-          }
-          
-          .container {
-          flex-direction: column; /* 세로 정렬 */
-      }
-      }
-
-
-      .publications {
-          grid-column: 1 / -1; /* 첫 번째 열부터 마지막 열까지 차지 */
-      }
-
-      .pub-category-title {
-        font-size: 1.3rem;
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
-        color: #333;
-      }
-
-      .pub-category {
-            margin-bottom: 2rem;
-      }
-      .publication-item {
-          display: flex;
-          gap: 2rem;
-          margin-bottom: 2rem;
-          padding-bottom: 2rem;
-          border-bottom: 1px solid #eee;
-      }
-      
-      .pub-preview {
-          flex: 0 0 200px;
-      }
-      
-      .pub-preview img {
-          width: 100%;
-          height: auto;
-          border: 1px solid #eee;
-          border-radius: 4px;
-      }
-      
-      .pub-content {
-          flex: 1;
-      }
-      
-      .pub-content h3 {
-          font-size: 1.1rem;
-          margin-bottom: 0.5rem;
-          color: #333;
-      }
-      
-      .authors {
-          color: #666;
-          margin-bottom: 0.5rem;
-      }
-      
-      .conference {
-          color: #444;
-          margin-bottom: 0.5rem;
-      }
-      
-      .highlight {
-          color: #e74c3c;
-          font-weight: 500;
-      }
-      
-      .pub-links {
-          margin-top: 0.5rem;
-      }
-      
-      .pub-links a {
-          color: #4285f4;
-          text-decoration: none;
-          margin-right: 1rem;
-      }
-      
-      .pub-links a:hover {
-          text-decoration: underline;
-      }
-
-      @media (max-width: 768px) {
-          .publication-item {
-              flex-direction: column;
-              gap: 1rem;
-          }
-          
-          .pub-preview {
-              flex: 0 0 auto;
-          }
-      }
+    /* Publications 블록(원본 그대로) */
+    .publications{grid-column:1 / -1;}
+    .pub-category-title{font-size:1.3rem;margin:1.5rem 0;color:#333;}
+    .publication-item{display:flex;gap:2rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid #eee;}
+    .pub-preview{flex:0 0 200px}.pub-preview img{width:100%;border:1px solid #eee;border-radius:4px;}
+    .pub-content{flex:1;}
+    .pub-content h3{font-size:1.1rem;margin-bottom:.5rem;color:#333;}
+    .authors{color:#666;margin-bottom:.5rem;}
+    .conference{color:#444;margin-bottom:.5rem;}
+    .highlight{color:#e74c3c;font-weight:500;}
+    .pub-links{margin-top:.5rem;}
+    .pub-links a{color:#4285f4;margin-right:1rem;}
+    @media(max-width:768px){.publication-item{flex-direction:column;gap:1rem}.pub-preview{flex:0 0 auto}}
   </style>
 </head>
-<body>
 
-  <!-- ───── 네비게이션 ───── -->
-  <header class="navbar">
-    <div class="nav-wrapper">
-      <div class="nav-left"><a href="#">Geonkuk Kim</a></div>
-      <nav class="nav-menu">
-        <ul>
-<!--           <li><a href="#education">Education</a></li> -->
-<!--           <li><a href="#education">Education</a></li> -->
-          <li><a href="#news">News</a></li>
-          <li><a href="#experiences">Experiences</a></li>
-          <li><a href="#conferences">Conferences</a></li>
-          <li><a href="#awards">Awards</a></li>
-        </ul>
-      </nav>
-    </div>
-    <hr class="nav-underline">
+<body>
+  <!-- 헤더 + 네비 -->
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-title">Geonkuk Kim</div>
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#conferences">Conferences</a>
+        <a href="#awards">Awards</a>
+      </div>
+    </nav>
   </header>
 
-  <!-- ───── 프로필 영역 ───── -->
-  <section class="profile-section">
-    <div class="profile-left">
-      <div class="profile-img"><img src="cv_profile.jpg" alt="Profile Photo"></div>
+  <!-- 메인 -->
+  <main id="home" class="main-content">
+    <!-- 프로필 좌측 -->
+    <section class="profile-section">
+      <img src="cv_profile.jpg" alt="Profile" class="profile-image">
       <h1 class="profile-name">Geonkuk Kim</h1>
-      <p class="profile-position">
-        <a href="https://sites.google.com/view/harilab/home" class="harilab-link" target="_blank">HARILAB</a>,
-        Korea University & KIST
-      </p>
-      <p class="profile-intro">Research interests: Robot Learning</p>
-    </div>
+      <p class="profile-title">M.S. Student, Mechanical Engineering<br>Korea University</p>
+      <div class="profile-links">
+        <!-- 필요 시 추가 아이콘 사용 -->
+        <a href="mailto:ggk0929@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/servingrobotmaster" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </section>
 
-    <div class="profile-right">
-      <!-- ① 소개글 -->
-      <p class="about-summary">
-        Master’s student focusing on visual&nbsp;affordance&nbsp;learning and robot manipulation.
-      </p>
-    
-      <!-- ② Contact + Education 나란히 -->
-<!--       <div class="info-row">
-        <div class="info-card">
-          <h2>Contact</h2>
-          <p><strong>Email:</strong> <a href="mailto:ggk0929@gmail.com">ggk0929@gmail.com</a></p>
-          <p><strong>Location:</strong> 5, Hwarang-ro 14-gil, Seoul</p>
+    <!-- 우측 콘텐츠 -->
+    <section class="content-section">
+      <!-- About Me -->
+      <div class="section">
+        <h2 class="section-title">About Me</h2>
+        <p>Master’s student focusing on visual affordance learning and robotic manipulation.</p><br>
+        <p>I am interested in robot learning, deep learning-based manipulation and context-aware affordance generation.</p>
+      </div>
+
+      <!-- Contact & Education (나란히) -->
+      <div class="container">
+        <!-- Contact -->
+        <div class="section contact-info">
+          <h2 class="section-title">Contact</h2>
+          <ul class="contact-list">
+            <li><i class="fa-solid fa-envelope"></i><span>ggk0929@gmail.com</span></li>
+            <li><i class="fa-solid fa-location-dot"></i><span>5, Hwarang-ro 14-gil, Seoul</span></li>
+          </ul>
         </div>
-  
-        <div class="info-card" id="education">
-          <h2>Education</h2>
-          <p><strong>Korea University</strong> (2024 – )<br><span class="icon">🎓</span>M.S. in Mechanical Engineering</p>
-          <p><strong>Seoul National University of Science and Technology</strong> (2018 – 2024)<br><span class="icon">🎓</span>B.S. in Mechanical & Automotive Engineering</p>
+
+        <!-- Education -->
+        <div class="section education">
+          <h2 class="section-title">Education</h2>
+          <ul class="education-list">
+            <li><span class="icon">🎓</span>
+              <div class="details"><strong>Korea University</strong> (2024 – )<br>M.S. in Mechanical Engineering</div>
+            </li>
+            <li><span class="icon">🎓</span>
+              <div class="details"><strong>Seoul National Univ. of Science & Technology</strong> (2018 – 2024)<br>B.S. in Mechanical & Automotive Engineering</div>
+            </li>
+          </ul>
         </div>
-      </div> -->
-    </div>
-    <div class="container">
-    <div class="section contact-info">
-        <h2 class="section-title">Contact</h2>
-        <ul class="contact-list">
-            <li>
-              <p><strong>Email:</strong> <a href="mailto:ggk0929@gmail.com">ggk0929@gmail.com</a></p>
-              <p><strong>Location:</strong> 5, Hwarang-ro 14-gil, Seoul</p>
-            </li>
-        </ul>
-    </div>
-    <div class="section education">
-        <h2 class="section-title">Education</h2>
-        <ul class="education-list">
-            <li>
-<!--                 <span class="icon">🎓</span> -->
-                <div class="details">
-                  <p><strong>Korea University</strong> (2024 – )<br><span class="icon">🎓</span>M.S. in Mechanical Engineering</p>
-                </div>
-            </li>
-            <li>
-<!--                 <span class="icon">🎓</span> -->
-                <div class="details">
-                  <p><strong>Seoul National University of Science and Technology</strong> (2018 – 2024)<br><span class="icon">🎓</span>B.S. in Mechanical & Automotive Engineering</p>
-                </div>
-            </li>
+      </div>
+
+      <!-- News -->
+      <div id="news" class="section">
+        <h2 class="section-title">News</h2>
+        <ul class="record-list">
+          <li>May 2025 · Paper accepted to <a href="https://2025.ieeeicip.org/" target="_blank">ICIP 2025</a> 🎉</li>
         </ul>
       </div>
-    </div>
-  </section>
 
-  <!-- ───── News ───── -->
-  <section id="News" class="content-section">
-    <div class="section-inner">
-      <h2>News</h2><hr>
-      May. 2025: One paper got accepted to <a href="https://2025.ieeeicip.org/" class="icip2025-link" target="_blank">ICIP 2025</a>!
-    </div>
-  </section>
-  
-  <!-- ───── EXPERIENCES ───── -->
-  <section id="experiences" class="content-section">
-    <div class="section-inner">
-      <h2>Research Experiences</h2><hr>
-      <ul class="experiences-list">
-        <li>
-          <div class="desc">
-            <strong>Research Student</strong>, KIST<br>
-            <em>Context-aware affordance learning</em>
-          </div>
-          <span class="date">Feb 2024 – Present</span>
-        </li>
-        <li>
-          <div class="desc">
-            <strong>Research Intern</strong>, KIST<br>
-            <em>Visual affordance for apple harvesting</em>
-          </div>
-          <span class="date">Sep 2023 – Feb 2024</span>
-        </li>
-      </ul>
-    </div>
-  </section>
+      <!-- Experiences -->
+      <div id="experiences" class="section">
+        <h2 class="section-title">Research Experiences</h2>
+        <ul class="experiences-list">
+          <li>
+            <div class="desc"><strong>Research Student</strong>, KIST<br><em>Context-aware Affordance Learning</em></div>
+            <span class="date">Feb 2024 – Present</span>
+          </li>
+          <li>
+            <div class="desc"><strong>Research Intern</strong>, KIST<br><em>Visual Affordance for Apple Harvesting</em></div>
+            <span class="date">Sep 2023 – Feb 2024</span>
+          </li>
+        </ul>
+      </div>
 
-  <!-- ───── Conferences ───── -->
-  <section id="conferences" class="content-section">
-    <div class="section-inner">
-      <h2>Conferences</h2><hr>
-      <h3>CAG: Context Conditional Affordance Generation</h3>
-      <p class="authors"><strong>Geonkuk Kim</strong>, Tae-Min Choi, Shinsuk Park, and Juyoun Park*</p>
-      <p class="conference">ICIP 2025</p>
-    </div>
-  </section>
+      <!-- Conferences -->
+      <div id="conferences" class="section">
+        <h2 class="section-title">Conferences</h2>
+        <ul class="record-list">
+          <li><strong>G. Kim</strong>, T. Choi, S. Park, J. Park*  “CAG: Context-Conditional Affordance Generation”, ICIP 2025, Alaska (accepted)</li>
+        </ul>
+      </div>
 
-  <!-- ───── Awards ───── -->
-  <section id="awards" class="content-section">
-    <div class="section-inner">
-      <h2>Awards</h2><hr>
-      <ul>
-      <li>Campus Patent Universiade – Samsung Electro Mechanics CEO Award (Nov. 2023)</li>
-      <li>Campus Patent Universiade – LG Display CEO Award (Nov. 2022)</li>
-      <li>
-        Campus Patent Universiade – Korea Invention Promotion Association President’s Award 
-        (Nov. 2021) (Project theme provided by Samsung Electronics)
-      </ul>
-    </div>
-  </section>
+      <!-- Awards -->
+      <div id="awards" class="section">
+        <h2 class="section-title">Awards</h2>
+        <ul class="record-list">
+          <li>Samsung Electro-Mechanics CEO Award (2023)</li>
+          <li>LG Display CEO Award (2022)</li>
+          <li>KIPA President’s Award (2021)</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-  <!-- ───── 푸터 ───── -->
-  <footer class="footer">
-    <p>© 2025 Geonkuk Kim. All Rights Reserved.</p>
+  <!-- 푸터 -->
+  <footer style="text-align:center;margin:2rem 0;font-size:.9rem;color:#666">
+    © 2025 Geonkuk Kim. All Rights Reserved.
   </footer>
-
-  <!-- JS (부드러운 스크롤 등) -->
-  <script src="js/script.js"></script>
 </body>
 </html>
