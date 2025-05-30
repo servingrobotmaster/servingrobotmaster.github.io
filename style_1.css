@@ -39,6 +39,22 @@ body {
 .info-card{padding:1rem;}
 .info-card h2{margin-bottom:.5rem;font-weight:bold;}
 .info-card hr{border:0;border-bottom:1px solid #ddd;margin-bottom:.5rem;}
+.profile-right .about-summary{
+  margin-bottom:1rem;
+  line-height:1.5;
+}
+.info-row{                  /* Contact·Education 두 칸 묶음 */
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.info-row .info-card{       /* 두 카드가 동일폭 */
+  flex:1 1 240px;
+  background:#fff;
+  border-radius:6px;
+  box-shadow:0 1px 4px rgba(0,0,0,.1);
+  padding:1rem;
+}
 
 /* ───────── 콘텐츠 섹션(가로 풀 + 배경 교차) ───────── */
 .content-section{
