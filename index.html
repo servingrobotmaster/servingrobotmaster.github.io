@@ -4,228 +4,107 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Geonkuk Kim</title>
-  <!-- 폰트어썸(아이콘) CDN: 필요 없으면 삭제 가능 -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-..."
-    crossorigin="anonymous"
-  />
+
+  <!-- 아이콘 CDN -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-…" crossorigin="anonymous"/>
+
   <!-- 메인 CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_1.css">
 </head>
 <body>
-  <!-- ===== 상단 네비게이션 ===== -->
+
+  <!-- ───── 네비게이션 ───── -->
   <header class="navbar">
     <div class="nav-wrapper">
-      <!-- 왼쪽 상단 로고/이름 -->
-      <div class="nav-left">
-        <a href="#">Geonkuk Kim</a>
-      </div>
-      <!-- 메뉴 링크들 -->
+      <div class="nav-left"><a href="#">Geonkuk Kim</a></div>
       <nav class="nav-menu">
         <ul>
           <li><a href="#education">Education</a></li>
           <li><a href="#experiences">Experiences</a></li>
           <li><a href="#conferences">Conferences</a></li>
           <li><a href="#awards">Awards</a></li>
-<!--           <li><a href="#projects">Projects</a></li> -->
-<!--           <li><a href="#skills">Skills & Techniques</a></li> -->
-<!--           <li><a href="#activities">Activities</a></li> -->
         </ul>
       </nav>
     </div>
     <hr class="nav-underline">
   </header>
 
-  <!-- ===== 메인 섹션 (프로필 사진 + 간단 소개 + Contact/Education 카드) ===== -->
+  <!-- ───── 프로필 영역 ───── -->
   <section class="profile-section">
-    <!-- 왼쪽 칸: 프로필 이미지와 간단 소개 -->
     <div class="profile-left">
-      <div class="profile-img">
-        <!-- 실제 프로필 사진 경로를 아래 src에 넣어주세요 -->
-        <img src="cv_profile.jpg" alt="Profile Photo">
-      </div>
+      <div class="profile-img"><img src="cv_profile.jpg" alt="Profile Photo"></div>
       <h1 class="profile-name">Geonkuk Kim</h1>
-      <p class="profile-position">HARILAB, Korea University & KIST</p>
-      <p class="profile-intro">
-        Research interests: Robot Learning
+      <p class="profile-position">
+        <a href="https://harilab.korea.ac.kr" class="harilab-link" target="_blank">HARILAB</a>,
+        Korea University & KIST
       </p>
+      <p class="profile-intro">Research interests: Robot Learning</p>
     </div>
 
-    <!-- 오른쪽 칸: Contact & Education 카드 -->
     <div class="profile-right">
-      <!-- Contact -->
       <div class="info-card">
-        <h2>Contact</h2>
-        <hr />
+        <h2>Contact</h2><hr>
         <p><strong>Email:</strong> <a href="mailto:ggk0929@gmail.com">ggk0929@gmail.com</a></p>
-        <p><strong>Location:</strong> 5, Hwarang-ro 14-gil, Seongbuk-gu, Seoul, Republic of Korea</p>
-<!--         <p><strong>Tel:</strong> +82-10-9354-8472</p> -->
+        <p><strong>Location:</strong> 5, Hwarang-ro 14-gil, Seongbuk-gu, Seoul</p>
       </div>
-
-      <!-- Education (요약) -->
-<!--       <div class="info-card">
-        <h2>Education</h2>
-        <hr />
-        <p>
-          <strong>Korea University, Seoul, Korea</strong> (Feb. 2024 – Present)<br>
-          M.S. in Mechanical Engineering
-        </p>
-        <p>
-          <strong>Seoul National University of Science and Technology</strong> (Mar. 2018 – Feb. 2024)<br>
-          B.S. in Mechanical and Automotive Engineering
-        </p>
-      </div> -->
     </div>
   </section>
 
-  <!-- ===== 아래쪽 상세 섹션들 ===== -->
+  <!-- ───── Education ───── -->
   <section id="education" class="content-section">
-    <h2>Education</h2>
-    <hr />
-    <p>
-      <strong>Korea University, Seoul, Korea (2024 ~ Present)</strong><br>
-      M.S. in Mechanical Engineering<br>
-<!--       <em>Co-advisor: Prof. Shinsuk Park; Advisor: Dr. Juyoun Park</em> -->
-    </p>
-    <br>
-    <p>
-      <strong>Seoul National University of Science and Technology (2018~2024)</strong><br>
-      B.S. in Mechanical and Automotive Engineering<br>
-    </p>
+    <div class="section-inner">
+      <h2>Education</h2><hr>
+      <p><strong>Korea University (2024 – Present)</strong><br>M.S. in Mechanical Engineering</p><br>
+      <p><strong>Seoul National University of Science and Technology (2018 – 2024)</strong><br>
+         B.S. in Mechanical & Automotive Engineering</p>
+    </div>
   </section>
 
+  <!-- ───── Experiences ───── -->
   <section id="experiences" class="content-section">
-    <h2>Experiences</h2>
-    <hr />
-    <ul>
-      <li>
-        <strong>Research Student</strong>, Korea Institute of Science and Technology 
-        (Feb. 2024 – Present)<br>
-        <em>Context-aware Affordance learning for robotic manipulation</em>
-      </li>
-      <li>
-        <strong>Research Intern</strong>, Korea Institute of Science and Technology 
-        (Sep. 2023 – Feb. 2024)<br>
-        <em>Development of Visual Affordance Model for Harvesting Apple Tasks</em>
-      </li>
-<!--       <li>
-        <strong>Research Student</strong>, Seoul National University of Science and Technology 
-        (Jun. 2022 – Jun. 2023)<br>
-        <em>Development of Manipulator Control System Using VR devices</em>
-      </li> -->
-      <li>
-        <strong>Military Service</strong>, The 8th Corps, Republic of Korea Army 
-        (Mar. 2020 – Sep. 2021)<br>
-        <em>
-          Served as a Personnel Administration Clerk: Responsible for managing personnel affairs 
-          for a unit of 400 personnel.
-        </em>
-      </li>
-    </ul>
+    <div class="section-inner">
+      <h2>Experiences</h2><hr>
+      <ul>
+        <li><strong>Research Student</strong>, KIST (Feb 2024 – Present)<br>
+            <em>Context-aware Affordance Learning</em></li>
+        <li><strong>Research Intern</strong>, KIST (Sep 2023 – Feb 2024)<br>
+            <em>Visual Affordance for Apple Harvesting</em></li>
+        <li><strong>Military Service</strong>, ROK Army (Mar 2020 – Sep 2021)</li>
+      </ul>
+    </div>
   </section>
 
+  <!-- ───── Conferences ───── -->
   <section id="conferences" class="content-section">
-    <h2>Conferences</h2>
-    <hr />
-    <ul>
-      <li>
-        (Accepted) <strong>Geonkuk Kim</strong>, Tae-Min Choi, Shinsuk Park, and Juyoun Park*, 
-        <em>“CAG: Context Conditional Affordance Generation”</em>, 
-        IEEE ICIP 2025, Alaska, USA (Sep. 2025)
-      </li>
-    </ul>
+    <div class="section-inner">
+      <h2>Conferences</h2><hr>
+      <ul>
+        <li>(Accepted) <strong>G. Kim</strong> et al., 
+            <em>“CAG: Context Conditional Affordance Generation”</em>, IEEE ICIP 2025</li>
+      </ul>
+    </div>
   </section>
 
+  <!-- ───── Awards ───── -->
   <section id="awards" class="content-section">
-    <h2>Awards</h2>
-    <hr />
-    <ul>
-      <li>Campus Patent Universiade – Samsung Electro Mechanics CEO Award (Nov. 2023)</li>
-      <li>Campus Patent Universiade – LG Display CEO Award (Nov. 2022)</li>
-      <li>
-        Campus Patent Universiade – Korea Invention Promotion Association President’s Award 
-        (Nov. 2021) (Project theme provided by Samsung Electronics)
-      </li>
-<!--       <li>SeoulTech Startup Contest Silver Prize (Dec. 2019)</li>
-      <li>SeoulTech Product Contest (Dec. 2019)</li>
-      <li>SeouTech Campus Creative Invention Contest Bronze Award (May. 2019)</li>
-      <li>SeoulTech Campus Creative Invention Contest Silver Award (May. 2018)</li> -->
-    </ul>
+    <div class="section-inner">
+      <h2>Awards</h2><hr>
+      <ul>
+        <li>Campus Patent Universiade — Samsung Electro Mechanics CEO Award (2023)</li>
+        <li>Campus Patent Universiade — LG Display CEO Award (2022)</li>
+        <li>Campus Patent Universiade — KIPA President’s Award (2021)</li>
+      </ul>
+    </div>
   </section>
 
-<!--   <section id="projects" class="content-section">
-    <h2>Projects</h2>
-    <hr />
-    <ul>
-      <li>
-        <strong>MOTIE Research Project</strong> (2025 ~ Present): 
-        Performing the artificial human task of continuous growth of embodied intelligence
-      </li>
-      <li>
-        <strong>Side Research Project</strong> (2024 ~ Present): 
-        Robot motion control using multi-function sensors, Yolo model (KIST)
-      </li>
-      <li>
-        <strong>MOTIE Research Project</strong> (2024 ~ 2025): 
-        Development of Robot Hand Tactile Intelligence Technology Based on Tactile Data Learning 
-        (KIST)
-      </li>
-    </ul>
-  </section> -->
-
-<!--   <section id="skills" class="content-section">
-    <h2>Skills & Techniques</h2>
-    <hr />
-    <ul>
-      <li>
-        <strong>Technical/Operations:</strong> Robotics (ROS1, ROS2), CAD (2D/3D), 
-        Simulation (Unity, Gazebo, O3DE), Hardware (Franka Emika, G1 Unitree)
-      </li>
-      <li>
-        <strong>Machine Learning / AI & Programming:</strong> ML, DL, NLP, C#, Python, Matlab
-      </li>
-      <li>
-        <strong>International:</strong> Intermediate in English (OPIC IH), developing Japanese 
-        understanding
-      </li>
-      <li>
-        <strong>Advantages:</strong> Excellent team collaboration and goal-oriented approach
-      </li>
-    </ul>
-  </section> -->
-
-<!--   <section id="activities" class="content-section">
-    <h2>Activities</h2>
-    <hr />
-    <ul>
-      <li>
-        <strong>Young Intellectual Property Leaders (YIPL)</strong> (Nov. 2021 – Present):  
-        Organized by The National Academy of Engineering of Korea & 
-        Korea Invention Promotion Association
-      </li>
-      <li>
-        <strong>Invention and Development Research Society</strong> (Mar. 2018 – 2024):  
-        Weekly idea meetings, volunteering in science fields, idea competitions, etc.
-      </li>
-      <li>
-        <strong>English Conversation Club</strong> (Mar. 2018 – 2019):  
-        Cultural and language exchange with exchange students
-      </li>
-      <li>
-        <strong>Running Crew Club</strong> (Mar. 2018 – 2019):  
-        Weekly running activities, marathon participation
-      </li>
-    </ul>
-  </section>
- -->
-  <!-- 하단 푸터 -->
+  <!-- ───── 푸터 ───── -->
   <footer class="footer">
     <p>© 2025 Geonkuk Kim. All Rights Reserved.</p>
   </footer>
 
-  <!-- ===== JS 파일 로드 ===== -->
+  <!-- JS (부드러운 스크롤 등) -->
   <script src="js/script.js"></script>
 </body>
 </html>
