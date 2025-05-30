@@ -62,7 +62,7 @@ code, pre, kbd, samp {
 .info-card hr{border:0;border-bottom:1px solid #ddd;margin-bottom:.5rem;} */
 .info-row{display:flex;gap:1rem;flex-wrap:wrap;}
 .info-row .info-card{
-  flex:1 1 500px;              /* 두 카드가 같은 행에 있도록 최소폭 ↑ */
+  flex:1 1 300px;              /* 두 카드가 같은 행에 있도록 최소폭 ↑ */
   background:#fff;border-radius:6px;
 /*   box-shadow:0 1px 4px rgba(0,0,0,.1);padding:1rem; */
 }
