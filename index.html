@@ -50,8 +50,24 @@
     .contact-list li,.education-list li{display:flex;align-items:center;margin-bottom:.8rem;}
     .contact-list i,.education-list .icon{font-size:1.2rem;margin-right:.5rem;color:#333;}
     .education-list .details{line-height:1.4;}
-    .education-list li strong {
+/*     .education-list li strong {
       white-space: nowrap;
+    } */
+    /* 추가적으로, 아이콘과 텍스트가 긴 경우에도 잘 정렬되도록 */
+    .education-list li {
+      display: flex;
+      align-items: flex-start; /* 아이콘을 텍스트의 첫 줄에 정렬 */
+      margin-bottom: .8rem;
+    }
+    
+    .education-list .icon {
+      flex-shrink: 0; /* 아이콘이 줄어들지 않도록 */
+      margin-right: .5rem;
+    }
+    
+    .education-list .details {
+      flex-grow: 1; /* 남은 공간을 텍스트가 채우도록 */
+      line-height: 1.4;
     }
     /* ── News (전체 폭, 파란색 번갈아) ── */
     #news{width:100%;margin-top:2rem;}
