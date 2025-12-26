@@ -1,0 +1,11 @@
+<span class="image avatar">
+  <img src="{{ site.profile_image | default: '/assets/images/avatar.jpg' }}" alt="Profile photo" />
+</span>
+
+<h1 id="logo">
+  <a href="{{ site.cv_file | default: '/assets/files/CV.pdf' }}" target="_blank" rel="noopener">
+    {{ site.author }}
+  </a>
+</h1>
+
+<p>{{ site.work }}</p>
