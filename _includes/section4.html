@@ -1,11 +1,62 @@
 <div class="container">
   <h3>Conferences</h3>
 
-  <ul class="alt" style="margin-top: 1.25em;">
-    <li>
-      <strong>Geonkuk Kim</strong>, Tae-Min Choi, Shinsuk Park, and Juyoun Park*<br>
-      <em>CAG: Context conditional 2D Affordance Generation</em><br>
-      The IEEE International Conference on Image Processing (IEEE ICIP 2025)
-    </li>
-  </ul>
+  <!-- 여기부터: 이미지(왼쪽) + 글(오른쪽) 레이아웃 -->
+  <div class="features">
+
+    <!-- 항목 1개 -->
+    <article>
+      <!-- ✅ 왼쪽: 이미지 -->
+      <a class="image" style="vertical-align: top;">
+        <!-- NOTE: 아래 이미지 파일을 assets/images/icip2025.png 로 넣어줘 -->
+        <img src="/assets/images/intro_v7?v=1" alt="ICIP 2025 teaser" />
+      </a>
+
+      <!-- ✅ 오른쪽: 텍스트 -->
+      <div class="inner" style="vertical-align: top;">
+        <h4 style="margin-bottom: 0.4em;">
+          <!-- 제목에 링크도 가능 -->
+          <a href="https://2025.ieeeicip.org/" target="_blank" rel="noopener"
+             style="text-decoration: underline;">
+            ICIP 2025
+          </a> :
+          <br>
+          <span style="font-weight: 700;">CAG: Context conditional 2D Affordance Generation</span>
+        </h4>
+
+        <p style="margin-bottom: 0.9em;">
+          <strong>Geonkuk Kim</strong>, Tae-Min Choi, Shinsuk Park, and Juyoun Park*<br>
+          The IEEE International Conference on Image Processing (IEEE ICIP 2025)
+        </p>
+
+        <!-- 스샷처럼 체크/불릿 스타일로 쓰고 싶으면 이렇게 -->
+        <p style="margin-bottom: 0;">
+          ✔️ Contribution 1: (여기에 한 줄 요약)<br>
+          ✔️ Contribution 2: (여기에 한 줄 요약)<br>
+          - (부가설명/실험조건 등)<br>
+        </p>
+
+        <!-- 버튼/링크도 넣고 싶으면 (선택) -->
+        <ul class="actions" style="margin-top: 1.0em;">
+          <!-- PDF/코드/포스터 링크로 교체 -->
+          <li><a class="button" href="/assets/files/CAG_paper.pdf" target="_blank" rel="noopener">Paper</a></li>
+          <li><a class="button alt" href="/assets/files/CAG_poster.pdf" target="_blank" rel="noopener">Poster</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 항목 더 추가하고 싶으면, 위 <article> ... </article> 블록을 복붙해서 추가하면 됨 -->
+    <!--
+    <article>
+      <a class="image" style="vertical-align: top;">
+        <img src="/assets/images/another.png?v=1" alt="Another" />
+      </a>
+      <div class="inner" style="vertical-align: top;">
+        <h4>...</h4>
+        <p>...</p>
+      </div>
+    </article>
+    -->
+
+  </div>
 </div>
