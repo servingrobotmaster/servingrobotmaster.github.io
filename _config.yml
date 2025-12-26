@@ -1,0 +1,37 @@
+# Site configuration
+# ------------------
+# This site uses the "Read" Jekyll theme (HTML5UP Read-Only based).
+# You can deploy it on GitHub Pages as-is.
+
+# Basic
+title: "Geonkuk Kim"
+name: "Geonkuk Kim"
+author: "Geonkuk Kim 📄"
+year: 2025
+
+# Short tagline shown under the name in the left sidebar.
+# (You can use simple HTML like <br> for line breaks.)
+work: >
+  Korea University &amp; KIST<br>
+  Research interests: 3D/2D Egocentric Vision, Robotic Manipulation, MLLMs
+
+# Profile assets
+# - Replace the image and CV in these paths with your own files.
+profile_image: "/assets/images/avatar.jpg"
+cv_file: "/assets/files/CV.pdf"
+
+# Navigation (one-page sections)
+nav1: "Home"
+nav2: "News"
+nav3: "Experiences"
+nav4: "Conferences"
+nav5: "Awards & Others"
+
+# Social links (shown as icons in the left sidebar)
+# Use only what you want to show.
+linkedin: "geonkukkim"
+github: "servingrobotmaster"
+# For Google Scholar, put the path after https://scholar.google.com/
+# Example: citations?user=XXXXXXXXXXX&hl=en
+google_scholar: "citations?user=SYvUtLcAAAAJ&hl=ko"
+email: "ggk0929@gmail.com"
