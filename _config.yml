@@ -10,10 +10,9 @@ author: "Geonkuk Kim 📄"
 year: 2025
 
 # Short tagline shown under the name in the left sidebar.
-# (You can use simple HTML like <br> for line breaks.)
+# Research interests: 3D/2D Egocentric Vision, Robotic Manipulation, MLLMs
 work: >
   Korea University &amp; KIST<br>
-  Research interests: 3D/2D Egocentric Vision, Robotic Manipulation, MLLMs
 
 # Profile assets
 # - Replace the image and CV in these paths with your own files.
@@ -25,7 +24,8 @@ nav1: "Home"
 nav2: "News"
 nav3: "Experiences"
 nav4: "Publications"
-nav5: "Awards & Others"
+nav5: "Projects"
+nav6: "Awards & Others"
 
 # Social links (shown as icons in the left sidebar)
 # Use only what you want to show.
