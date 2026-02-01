@@ -2106,7 +2106,7 @@ text-transform: none !important;
 }
 
 ul.feature-icons li:before {
-background: #002C5F;	
+background: #633f7a98;	
 border-radius: 100%;
 color: #ffffff;
 display: block;
@@ -2475,7 +2475,7 @@ flex-direction: column;
 -webkit-justify-content: space-between;
 -ms-justify-content: space-between;
 justify-content: space-between;
-background: #633f7a98;
+background: #002C5F;
 color: #ffffff;
 height: 100%;
 overflow-y: auto;
