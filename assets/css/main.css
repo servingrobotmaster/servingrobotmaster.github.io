@@ -2106,7 +2106,7 @@ text-transform: none !important;
 }
 
 ul.feature-icons li:before {
-background: #633f7a98;	
+background: #002C5F;	
 border-radius: 100%;
 color: #ffffff;
 display: block;
@@ -2568,7 +2568,7 @@ padding: 0;
 }
 
 #header > nav ul li {
-border-top: solid 2px #633f7ac7;
+border-top: solid 2px #002C5F;
 display: block;
 padding: 0;
 }
@@ -2867,7 +2867,7 @@ text-transform: none !important;
 }
 
 #titleBar .toggle:before {
-background: #633f7a98;
+background: #002C5F;
 color: #ffffff;
 content: '\f0c9';
 display: block;
