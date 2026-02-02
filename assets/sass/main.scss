@@ -227,7 +227,8 @@
 
 		&.major {
 			h2 {
-				color: _palette(accent1, bg);
+				// color: _palette(accent1, bg);
+				color: #0B3D91 !important; /* 현대차 남색 */
 				font-size: 3.5em;
 
 				& + p {
