@@ -976,7 +976,8 @@
 					a {
 						@include vendor('transition', 'none');
 						border: 0;
-						color: _palette(header, fg-bold) !important;
+						//color: _palette(header, fg-bold) !important;
+						color: #fff !important;
 						display: block;
 						padding: 0.85em 0;
 						text-decoration: none;
