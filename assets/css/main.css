@@ -1594,7 +1594,7 @@ margin: 0 0 2.25em 0;
 
 h1, h2, h3, h4, h5, h6 {
 		color: #00004D;
-		color: #6a15af;
+		/* color: #6a15af; */
 font-weight: 700;
 line-height: 1em;
 margin: 0 0 0.5625em 0;
