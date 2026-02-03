@@ -1730,13 +1730,13 @@ line-height: 1.5em;
 
 header.major h2 {
 		color: #00004D;
-		color: #6a15af;
+		/* color: #6a15af; */
 font-size: 1.75em;
 }
 
 header.major h2 + p {
 			color: #00004D;
-			color: #6a15af;
+			/* color: #6a15af; */
 font-size: 1.75em;
 font-weight: 700;
 margin-top: -0.75em;
