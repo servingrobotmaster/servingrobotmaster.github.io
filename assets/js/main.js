@@ -108,6 +108,41 @@
 					$('#titleBar, #header, #wrapper')
 						.css('transition', 'none');
 
+			// Theme toggle.
+				var themeKey = 'theme',
+					$themeToggle = $('#themeToggle');
+
+				if ($themeToggle.length) {
+					var applyTheme = function(mode) {
+						if (mode === 'dark') {
+							$body.addClass('theme-dark');
+							$themeToggle.attr('aria-pressed', 'true');
+							$themeToggle.attr('title', 'Switch to light mode');
+						} else {
+							$body.removeClass('theme-dark');
+							$themeToggle.attr('aria-pressed', 'false');
+							$themeToggle.attr('title', 'Switch to dark mode');
+						}
+					};
+
+					var stored;
+					try { stored = localStorage.getItem(themeKey); } catch (e) {}
+
+					if (stored === 'dark' || stored === 'light') {
+						applyTheme(stored);
+					} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+						applyTheme('dark');
+					} else {
+						applyTheme('light');
+					}
+
+					$themeToggle.on('click', function() {
+						var next = $body.hasClass('theme-dark') ? 'light' : 'dark';
+						applyTheme(next);
+						try { localStorage.setItem(themeKey, next); } catch (e) {}
+					});
+				}
+
 	});
 
 })(jQuery);

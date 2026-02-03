@@ -3145,3 +3145,146 @@ padding: 0;
 }
 
 }
+
+/* Theme Toggle + Dark Mode */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1em;
+  height: 2.1em;
+  padding: 0;
+  margin-left: 0.5em;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  color: inherit;
+  line-height: 1;
+}
+
+.theme-toggle:before {
+  content: '\f186'; /* moon */
+}
+
+body.theme-dark .theme-toggle:before {
+  content: '\f185'; /* sun */
+}
+
+.theme-toggle:focus {
+  outline: 2px solid #6a15af;
+  outline-offset: 2px;
+}
+
+body.theme-dark .theme-toggle {
+  background: #1f2937;
+  border-color: #374151;
+  color: #f9fafb;
+}
+
+body.theme-dark .theme-toggle:focus {
+  outline-color: #93c5fd;
+}
+
+body.theme-dark {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+body.theme-dark #wrapper {
+  background: #0f172a;
+}
+
+body.theme-dark #main > section {
+  background: #0f172a;
+  border-top-color: #1f2937;
+}
+
+body.theme-dark #main > section:nth-of-type(even) {
+  background: #111827;
+}
+
+body.theme-dark #footer {
+  background: #0b1220;
+  color: #e5e7eb;
+}
+
+body.theme-dark h1,
+body.theme-dark h2,
+body.theme-dark h3,
+body.theme-dark h4,
+body.theme-dark h5,
+body.theme-dark h6 {
+  color: #f9fafb;
+}
+
+body.theme-dark strong,
+body.theme-dark b {
+  color: #e5e7eb;
+}
+
+body.theme-dark header p {
+  color: #9ca3af;
+}
+
+body.theme-dark a {
+  border-bottom-color: #60a5fa;
+}
+
+body.theme-dark a:hover {
+  color: #93c5fd !important;
+}
+
+body.theme-dark hr {
+  border-bottom-color: #1f2937;
+}
+
+body.theme-dark blockquote {
+  border-left-color: #1f2937;
+}
+
+body.theme-dark ul.alt li {
+  border-top-color: #1f2937;
+}
+
+body.theme-dark #header {
+  background: #0b1220;
+  color: #e5e7eb;
+}
+
+body.theme-dark #header h1,
+body.theme-dark #header h2,
+body.theme-dark #header h3,
+body.theme-dark #header h4,
+body.theme-dark #header h5,
+body.theme-dark #header h6 {
+  color: #e5e7eb;
+}
+
+body.theme-dark #header a {
+  color: #e5e7eb;
+}
+
+body.theme-dark #header a:hover {
+  color: #e5e7eb !important;
+}
+
+body.theme-dark #header > nav ul li {
+  border-top-color: #1f2937;
+}
+
+body.theme-dark #header > nav ul li a.active {
+  background: #1f2937;
+  color: #e5e7eb !important;
+}
+
+body.theme-dark #titleBar {
+  background: #0b1220;
+  color: #e5e7eb;
+}
+
+body.theme-dark #titleBar .toggle:before {
+  background: #1f2937;
+  color: #e5e7eb;
+}
