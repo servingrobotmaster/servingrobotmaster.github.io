@@ -2605,6 +2605,11 @@ padding-right: 23em;
 
 #main > section {
 border-top: solid 6px #f4f4f4;
+background: #ffffff; /* About Me(첫 섹션)는 흰색 */
+}
+
+#main > section:nth-of-type(even) {
+  background: #fafafa; /* 두 번째, 네 번째… 회색 */
 }
 
 #main > section > .container {
