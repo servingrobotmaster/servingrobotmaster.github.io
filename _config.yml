@@ -25,7 +25,8 @@ nav2: "News"
 nav3: "Experiences"
 nav4: "Publications"
 nav5: "Projects"
-nav6: "Awards & Others"
+nav6: "Awards"
+nav7: "Others"
 
 # Social links (shown as icons in the left sidebar)
 # Use only what you want to show.
