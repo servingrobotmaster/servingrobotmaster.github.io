@@ -3155,9 +3155,10 @@ width: 100%;
 }
 
 .media-card img {
-  display: block;
   width: 100%;
-  border-radius: 6px;
+  max-height: 180px;
+  object-fit: contain; /* 전체 보이게 */
+  /* background: #f2f2f2; */
 }
 
 .media-card span {
