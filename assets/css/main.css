@@ -2966,6 +2966,44 @@ display: block;
 width: 100%;
 }
 
+/* Publications card: match image height to text */
+.features article.pub-item {
+  display: flex;
+  align-items: stretch;
+  gap: 2.5em;
+}
+
+.features article.pub-item .image {
+  width: 48%;
+  padding-right: 0;
+}
+
+.features article.pub-item .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 높이 맞추면서 잘리는 것 허용 */
+}
+
+.features article.pub-item .inner {
+  width: 50%;
+}
+
+/* 모바일에서는 다시 세로 스택 */
+@media screen and (max-width: 736px) {
+  .features article.pub-item {
+    display: block;
+  }
+
+  .features article.pub-item .image,
+  .features article.pub-item .inner {
+    width: 100%;
+  }
+
+  .features article.pub-item .image img {
+    height: auto;
+  }
+}
+
 /* Header */
 
 #header {
