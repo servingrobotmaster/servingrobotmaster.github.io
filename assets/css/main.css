@@ -3155,7 +3155,7 @@ width: 100%;
 }
 
 .media-card img {
-  width: 100%;
+  width: 50%;
   aspect-ratio: 16 / 9; /* 고정 비율 */
   height: 180px;
   object-fit: cover;
