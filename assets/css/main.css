@@ -3143,9 +3143,15 @@ width: 100%;
 
 .media-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5em;
-  margin-top: 0.75em;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.media-grid img {
+  width: 100%;
+  height: 200px;      /* 원하는 높이로 고정 */
+  object-fit: cover;  /* 비율 유지하며 크롭 */
+  display: block;
 }
 
 .media-card {
