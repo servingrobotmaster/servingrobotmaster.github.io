@@ -52,6 +52,7 @@
   </p>
   <ul>
     <li>Box stacking with Vision-language model</li>
+    <li>Autonomous Driving with Yolov8 model</li>
   </ul>
 
   <p style="margin-top: 1.0em; margin-bottom: 0.5em;"><strong>Visualization Results</strong></p>
@@ -61,12 +62,16 @@
       <img src="/assets/images/box_stacking.gif" alt="KIST demo 2" style="width: 100%; height: auto; display: block;" />
       <p style="margin-top: 0.5em; font-size: 0.9em; color: #666;">Box stacking manipulation</p>
     </div>
-    <div style="text-align: center;">
-      <img src="/assets/images/box_stacking.gif" alt="KIST demo 2" style="width: 100%; height: auto; display: block;" />
-      <p style="margin-top: 0.5em; font-size: 0.9em; color: #666;">Box stacking manipulation</p>
-    </div>
   </div>
     
   <!-- 여기까지 -->
         
 </div>
+
+<script>
+  document.addEventListener('contextmenu', (e) => {
+    if (e.target && e.target.tagName === 'IMG') {
+      e.preventDefault();
+    }
+  });
+</script>
