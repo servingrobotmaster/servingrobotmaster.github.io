@@ -3198,6 +3198,7 @@ padding: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 2.1em;
   height: 2.1em;
   padding: 0;
@@ -3215,7 +3216,21 @@ padding: 0;
 }
 
 body.theme-dark .theme-toggle:before {
-  content: '\f185'; /* sun */
+  content: '';
+  display: block;
+  width: 0.72em;
+  height: 0.72em;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow:
+    0 -0.58em 0 -0.25em currentColor,
+    0 0.58em 0 -0.25em currentColor,
+    0.58em 0 0 -0.25em currentColor,
+    -0.58em 0 0 -0.25em currentColor,
+    0.41em -0.41em 0 -0.25em currentColor,
+    -0.41em -0.41em 0 -0.25em currentColor,
+    0.41em 0.41em 0 -0.25em currentColor,
+    -0.41em 0.41em 0 -0.25em currentColor;
 }
 
 .theme-toggle:focus {
