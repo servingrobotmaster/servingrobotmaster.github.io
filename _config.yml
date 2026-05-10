@@ -8,6 +8,10 @@ title: "Geonkuk Kim"
 name: "Geonkuk Kim"
 author: "Geonkuk Kim 📄"
 year: 2025
+lang: "en"
+url: "https://servingrobotmaster.github.io"
+description: "Geonkuk Kim is a Robotics AI Engineer developing manipulation systems for high-DoF humanoid robots, with a focus on contact-rich and long-horizon tasks."
+image: "/assets/images/meta.png"
 
 # Short tagline shown under the name in the left sidebar.
 # Research interests: 3D/2D Egocentric Vision, Robotic Manipulation, MLLMs

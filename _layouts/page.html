@@ -4,11 +4,25 @@
 	Based on Read-only template released by html5up.
 	Free for personal and commercial use under the CCA 3.0 license
 -->
-<html>
+<html lang="{{ site.lang | default: 'en' }}">
 	<head>
 		<title>{{site.title}}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="{{ site.description | strip_html | strip_newlines | escape }}" />
+		<meta name="author" content="{{ site.name }}" />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="{{ site.url }}{{ page.url | default: '/' }}" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="{{ site.title }}" />
+		<meta property="og:description" content="{{ site.description | strip_html | strip_newlines | escape }}" />
+		<meta property="og:url" content="{{ site.url }}{{ page.url | default: '/' }}" />
+		<meta property="og:image" content="{{ site.url }}{{ site.image }}" />
+		<meta property="og:site_name" content="{{ site.title }}" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="{{ site.title }}" />
+		<meta name="twitter:description" content="{{ site.description | strip_html | strip_newlines | escape }}" />
+		<meta name="twitter:image" content="{{ site.url }}{{ site.image }}" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
