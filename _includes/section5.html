@@ -1,94 +1,102 @@
-<div class="container">
-  <h3>Projects</h3>
+<div class="section-head reveal">
+  <span class="section-eyebrow">05 — Engineering</span>
+  <h2>Projects</h2>
+  <p class="lead">Selected systems work spanning humanoid manipulation, dexterous control, and side projects.</p>
+</div>
 
-  <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.3em 1em; margin-bottom: 0.6em;">
-    <p style="margin: 0;">
-      <strong>End-to-end Physical AI pipeline for WIRobotics ALLEX</strong>
-    </p>
-    <span style="color: #999; font-size: 0.9em;">2026.04 - 2026.06</span>
+<div class="project-block reveal delay-1">
+  <div class="project-head">
+    <div class="project-title">End-to-end Physical AI pipeline for WIRobotics ALLEX</div>
+    <div class="project-date">2026.04 — 2026.06</div>
   </div>
   <ul>
     <li>Developed an AWS-based robot AI pipeline connecting ALLEX teleoperation data collection, multimodal dataset processing, VLA model fine-tuning, simulation, and inference deployment.</li>
     <li>Built data and training infrastructure around robot state, action, and video streams for contact-rich and long-horizon humanoid manipulation tasks.</li>
     <li>Contributed to the VLA deployment workflow and demo preparation for WIRobotics' Physical AI showcase at AWS Summit Seoul 2026.</li>
   </ul>
+</div>
 
-  <p style="margin-bottom: 0.6em;">
-    <strong>Autonomous bi-manual manipulation for humanoid robots (MOTIE Alchemist Project)</strong>
-  </p>
+<div class="project-block reveal delay-1">
+  <div class="project-head">
+    <div class="project-title">Autonomous bi-manual manipulation for humanoid robots (MOTIE Alchemist Project)</div>
+  </div>
   <ul>
-    <li>Trained robot foundation model (e.g., Isaac-Gr00t) with real + synthetic data</li>
-    <li>3D Affordance model development and deployment with Teleoperation and Isaac-Gr00t</li>
+    <li>Trained robot foundation model (e.g., Isaac-Gr00t) with real + synthetic data.</li>
+    <li>3D Affordance model development and deployment with Teleoperation and Isaac-Gr00t.</li>
   </ul>
 
-  <p style="margin-top: 1.0em; margin-bottom: 0.5em;"><strong>Framework & Demo Videos</strong></p>
-
-  <div class="media-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 1.5em;">
-    <div style="text-align: center;">
+  <div class="subhead">Framework &amp; Demo Videos</div>
+  <div class="media-grid">
+    <div class="media-tile">
       <a href="https://youtu.be/wO5ZvmiUpfg" target="_blank" rel="noopener">
-        <img src="/assets/images/bimanual_teleop.png" alt="KIST demo 1" style="width: 100%; height: auto; display: block;" />
+        <img src="/assets/images/bimanual_teleop.png" alt="Teleoperated bimanual dexterous manipulation" />
       </a>
-      <p style="margin-top: 0.5em; font-size: 0.9em; color: #666;">Teleoperated bimanual dexterous manipulation (Click image)</p>
+      <div class="caption">Teleoperated bimanual dexterous manipulation (click image)</div>
     </div>
-    <div style="text-align: center;">
+    <div class="media-tile">
       <a href="https://youtu.be/vfVjZ4uZMsI" target="_blank" rel="noopener">
-        <img src="/assets/images/teleop_affordance.png" alt="KIST demo 2" style="width: 100%; height: auto; display: block;" />
+        <img src="/assets/images/teleop_affordance.png" alt="Vision-Language 3D affordance model deployment" />
       </a>
-      <p style="margin-top: 0.5em; font-size: 0.9em; color: #666;">Vision-Language 3D affordance model deployment (Click image)</p>
+      <div class="caption">Vision-Language 3D affordance model deployment (click image)</div>
     </div>
   </div>
+</div>
 
-  <p style="margin-bottom: 0.6em;">
-    <strong>Dexterous manipulation for Franka (MOTIE Project)</strong>
-  </p>
+<div class="project-block reveal delay-2">
+  <div class="project-head">
+    <div class="project-title">Dexterous manipulation for Franka (MOTIE Project)</div>
+  </div>
   <ul>
-    <li>Trained an RL policy for real-world door-opening tasks (Franka Panda + KISTAR HAND)</li>
-    <li>Utilized domain randomization and sim-to-real transfer techniques</li>
-    <li>Evaluated dexterous hand RL policies by measuring convergence steps, and successfully validated the evaluation pipeline in Isaac Lab</li>
+    <li>Trained an RL policy for real-world door-opening tasks (Franka Panda + KISTAR HAND).</li>
+    <li>Utilized domain randomization and sim-to-real transfer techniques.</li>
+    <li>Evaluated dexterous hand RL policies by measuring convergence steps and validated the evaluation pipeline in Isaac Lab.</li>
   </ul>
 
-  <p style="margin-top: 1.0em; margin-bottom: 0.5em;"><strong>Visualization Results</strong></p>
-
-  <div class="media-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 1.5em;">
-    <div style="text-align: center;">
-      <img src="/assets/images/all_demo.gif" alt="KIST demo 1" style="width: 100%; height: auto; display: block;" />
-      <p style="margin-top: 0.5em; font-size: 0.9em; color: #666;">Training dexterous manipulation policy</p>
+  <div class="subhead">Visualization Results</div>
+  <div class="media-grid">
+    <div class="media-tile">
+      <div>
+        <img src="/assets/images/all_demo.gif" alt="Training dexterous manipulation policy" />
+        <div class="caption">Training dexterous manipulation policy</div>
+      </div>
     </div>
-    <div style="text-align: center;">
-      <img src="/assets/images/franka-kistar-open-desk.gif" alt="KIST demo 2" style="width: 100%; height: auto; display: block;" />
-      <p style="margin-top: 0.5em; font-size: 0.9em; color: #666;">Deployment of a trained policy for a drawer-opening task</p>
+    <div class="media-tile">
+      <div>
+        <img src="/assets/images/franka-kistar-open-desk.gif" alt="Deployment of a trained policy for a drawer-opening task" />
+        <div class="caption">Deployment of a trained policy for a drawer-opening task</div>
+      </div>
     </div>
   </div>
+</div>
 
-  <p style="margin-bottom: 0.6em; font-size: 1.2em;">
-    <strong>Side Project</strong>
-  </p>
+<div class="project-block reveal delay-3">
+  <div class="project-head">
+    <div class="project-title">Side Projects</div>
+  </div>
   <ul>
-    <li>Box stacking with Vision-language model</li>
-    <li>Autonomous driving with Yolov8 model</li>
+    <li>Box stacking with Vision-language model.</li>
+    <li>Autonomous driving with YOLOv8 model.</li>
   </ul>
 
-  <p style="margin-top: 1.0em; margin-bottom: 0.5em;"><strong>Visualization Results</strong></p>
-
-  <div class="media-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 1.5em;">
-    <div style="text-align: center;">
-      <img src="/assets/images/qwenvl2.5_3b_instruct_box_stacking_4배속_output.gif" alt="KIST demo 2" style="width: 100%; height: auto; display: block;" />
-      <p style="margin-top: 0.5em; font-size: 0.9em; color: #666;">Box stacking manipulation with Qwen-VL 2.5 3B Instruct</p>
+  <div class="subhead">Visualization Results</div>
+  <div class="media-grid">
+    <div class="media-tile">
+      <div>
+        <img src="/assets/images/qwenvl2.5_3b_instruct_box_stacking_4배속_output.gif" alt="Box stacking manipulation with Qwen-VL 2.5 3B Instruct" />
+        <div class="caption">Box stacking manipulation with Qwen-VL 2.5 3B Instruct</div>
+      </div>
     </div>
-    <div style="text-align: center;">
-      <img src="/assets/images/turtlebot_autonomous.gif" alt="KIST demo 2" style="width: 100%; height: auto; display: block;" />
-      <p style="margin-top: 0.5em; font-size: 0.9em; color: #666;">Autonomous driving and object detection with Yolov8</p>
+    <div class="media-tile">
+      <div>
+        <img src="/assets/images/turtlebot_autonomous.gif" alt="Autonomous driving and object detection with YOLOv8" />
+        <div class="caption">Autonomous driving and object detection with YOLOv8</div>
+      </div>
     </div>
   </div>
-    
-  <!-- 여기까지 -->
-        
 </div>
 
 <script>
-  document.addEventListener('contextmenu', (e) => {
-    if (e.target && e.target.tagName === 'IMG') {
-      e.preventDefault();
-    }
+  document.addEventListener('contextmenu', function (e) {
+    if (e.target && e.target.tagName === 'IMG') e.preventDefault();
   });
 </script>

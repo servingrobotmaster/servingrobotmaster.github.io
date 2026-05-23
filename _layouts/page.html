@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Read by Fastbyte01
-	Based on Read-only template released by html5up.
-	Free for personal and commercial use under the CCA 3.0 license
--->
 <html lang="{{ site.lang | default: 'en' }}">
 	<head>
 		<title>{{site.title}}</title>
@@ -23,79 +18,172 @@
 		<meta name="twitter:title" content="{{ site.title }}" />
 		<meta name="twitter:description" content="{{ site.description | strip_html | strip_newlines | escape }}" />
 		<meta name="twitter:image" content="{{ site.url }}{{ site.image }}" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="icon" type="image/jpeg" href="{{ site.profile_image }}" />
+		<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
 	</head>
 	<body>
 
-		<!-- Header -->
-			<section id="header">
-				  <header>
-				{% include header.html %}
-				</header>
-
-				<nav id="nav">
-				  {% include nav.html %}
-				</nav>
-
-				<footer>
-				{% include social-links.html %}
-				</footer>
-			</section>
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- One -->
-							<section id="one">
-								{% include section1.html %}
-							</section>
-
-						<!-- Two -->
-							<section id="two">
-								{% include section2.html %}
-							</section>
-
-						<!-- Three -->
-							<section id="three">
-								{% include section3.html %}
-							</section>
-
-						<!-- Four -->
-							<section id="four">
-								{% include section4.html %}
-							</section>
-
-						<!-- Five -->
-							<section id="five">
-								{% include section5.html %}
-							</section>
-
-						<!-- Six -->
-							<section id="six">
-								{% include section6.html %}
-							</section>
-
-						<!-- Seven -->
-							<section id="seven">
-								{% include section7.html %}
-							</section>
-
-					</div>
-
-				<!-- Footer -->
-					<section id="footer">
-					{% include footer.html %}	
-					</section>
-
+		<!-- Top navigation -->
+		<nav id="topnav" aria-label="Primary">
+			<div class="nav-inner">
+				<a href="#top" class="nav-brand">
+					<img class="brand-avatar" src="{{ site.profile_image }}" alt="{{ site.name }}" />
+					<span class="brand-name">{{ site.name }}</span>
+				</a>
+				{% include nav.html %}
+				<div class="nav-actions">
+					<button id="themeToggle" class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false"></button>
+					<button id="navToggle" class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"></button>
+				</div>
 			</div>
+		</nav>
 
-		<!-- Scripts -->
-			{%include script.html %}
+		<!-- Hero -->
+		<header id="top" class="hero">
+			<div class="container">
+				<div class="hero-text">
+					<div class="hero-eyebrow"><span class="dot"></span> Available for collaboration &amp; Ph.D. internships</div>
+					<h1 class="hero-title" id="heroTitle" data-text="Welcome to Geonkuk Kim's homepage!"></h1>
+					<p class="hero-sub">
+						Physical AI Engineer building VLA-based manipulation for humanoid robots.
+						Currently at WIRobotics, working on contact-rich and long-horizon tasks for ALLEX.
+					</p>
+					<div class="hero-cta">
+						<a class="btn btn-primary" href="{{ site.cv_file }}" target="_blank" rel="noopener">
+							<i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;Download CV
+						</a>
+						<a class="btn btn-ghost" href="#three">
+							Explore my work <span aria-hidden="true">→</span>
+						</a>
+					</div>
+				</div>
+				<div class="hero-visual">
+					<div class="avatar-wrap">
+						<img src="{{ site.profile_image }}" alt="{{ site.name }}" />
+						<div class="badge">
+							<span class="small">Currently</span>
+							{{ site.work }}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="scroll-cue" aria-hidden="true">Scroll</div>
+		</header>
 
+		<!-- Mission -->
+		<section class="mission" id="mission">
+			<div class="container">
+				<div class="reveal">
+					<div class="label">My Mission</div>
+					<p class="mission-statement">
+						Solving challenging <span class="hl">Physical AI</span> problems to bring forward
+						the era of <span class="hl">one robot per person</span> — building systems
+						that perceive, reason, and act in the messy real world.
+					</p>
+				</div>
+
+				<div class="pillars">
+					<div class="pillar reveal delay-1">
+						<div class="pillar-icon"><i class="fa fa-eye" aria-hidden="true"></i></div>
+						<h4>Perceive</h4>
+						<p>3D/2D egocentric vision and multimodal grounding for robots that understand the world around them.</p>
+					</div>
+					<div class="pillar reveal delay-2">
+						<div class="pillar-icon"><i class="fa fa-cogs" aria-hidden="true"></i></div>
+						<h4>Reason</h4>
+						<p>Vision-Language-Action models that turn perception into context-aware, long-horizon plans.</p>
+					</div>
+					<div class="pillar reveal delay-3">
+						<div class="pillar-icon"><i class="fa fa-hand-paper-o" aria-hidden="true"></i></div>
+						<h4>Act</h4>
+						<p>Contact-rich manipulation on high-DoF humanoid platforms, validated end-to-end on real hardware.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Sections -->
+		<section id="one" class="section">
+			<div class="container">
+				{% include section1.html %}
+			</div>
+		</section>
+
+		<section id="two" class="section">
+			<div class="container">
+				{% include section2.html %}
+			</div>
+		</section>
+
+		<section id="three" class="section">
+			<div class="container">
+				{% include section3.html %}
+			</div>
+		</section>
+
+		<section id="four" class="section">
+			<div class="container">
+				{% include section4.html %}
+			</div>
+		</section>
+
+		<section id="five" class="section">
+			<div class="container">
+				{% include section5.html %}
+			</div>
+		</section>
+
+		<section id="six" class="section">
+			<div class="container">
+				{% include section6.html %}
+			</div>
+		</section>
+
+		<section id="seven" class="section">
+			<div class="container">
+				{% include section7.html %}
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="site-footer">
+			<div class="container">
+				<div class="footer-inner">
+					<div>
+						<div class="footer-brand">{{ site.name }}</div>
+						<p class="footer-tag">{{ site.description }}</p>
+						<div class="social-row" style="margin-top: 14px;">
+							{% include social-links.html %}
+						</div>
+					</div>
+					<div class="footer-col">
+						<h5>Navigate</h5>
+						<ul>
+							<li><a href="#one">{{ site.nav1 }}</a></li>
+							<li><a href="#two">{{ site.nav2 }}</a></li>
+							<li><a href="#three">{{ site.nav3 }}</a></li>
+							<li><a href="#four">{{ site.nav4 }}</a></li>
+							<li><a href="#five">{{ site.nav5 }}</a></li>
+							<li><a href="#six">{{ site.nav6 }}</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h5>Contact</h5>
+						<ul>
+							<li><a href="mailto:{{ site.email }}"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{ site.email }}</a></li>
+							<li><a href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+							<li><a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></li>
+							<li><a href="https://scholar.google.com/{{ site.google_scholar }}" target="_blank" rel="noopener"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<span>&copy; {{ site.year }} {{ site.name }}. All rights reserved.</span>
+					<span>Built with care · Navy &amp; White</span>
+				</div>
+			</div>
+		</footer>
+
+		<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 	</body>
 </html>

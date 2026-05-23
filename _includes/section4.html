@@ -1,60 +1,40 @@
-<div class="container">
-  <h3>Publications</h3>
+<div class="section-head reveal">
+  <span class="section-eyebrow">04 — Research</span>
+  <h2>Publications</h2>
+  <p class="lead">Peer-reviewed papers and conference contributions.</p>
+</div>
 
-  <!-- 여기부터: 이미지(왼쪽) + 글(오른쪽) 레이아웃 -->
-  <div class="features">
+<div class="pub-list">
 
-    <!-- 항목 1개 -->
-    <article class="pub-item">
-      <!-- ✅ 왼쪽: 이미지 -->
-      <a class="image" style="vertical-align: top;">
-        <!-- NOTE: 아래 이미지 파일을 assets/images/icip2025.png 로 넣어줘 -->
-        <img src="/assets/images/intro_v7.png?v=1" alt="ICIP 2025 teaser" />
-      </a>
+  <article class="pub-item reveal delay-1">
+    <a class="pub-image" href="https://ieeexplore.ieee.org/document/11084719" target="_blank" rel="noopener">
+      <img src="/assets/images/intro_v7.png?v=1" alt="ICIP 2025 teaser" />
+    </a>
 
-      <!-- ✅ 오른쪽: 텍스트 -->
-      <div class="inner" style="vertical-align: top;">
-        <h4 style="margin-bottom: 0.4em;">
-          <!-- 제목에 링크도 가능 -->
-          <a href="https://2025.ieeeicip.org/" target="_blank" rel="noopener"
-             style="text-decoration: underline;">
-            ICIP 2025
-          </a> :
-          <br>
-          <span style="font-weight: 700;">CAG: Context conditional 2D Affordance Generation</span>
-        </h4>
+    <div>
+      <h4>
+        <a class="pub-venue" href="https://2025.ieeeicip.org/" target="_blank" rel="noopener">ICIP 2025</a>
+        <span class="pub-title">CAG: Context conditional 2D Affordance Generation</span>
+      </h4>
 
-        <p style="margin-bottom: 0.9em;">
-          <strong>Geonkuk Kim</strong>, Tae-Min Choi, Shinsuk Park, and Juyoun Park*<br>
-          The IEEE International Conference on Image Processing (IEEE ICIP 2025)
-        </p>
+      <p class="authors">
+        <strong>Geonkuk Kim</strong>, Tae-Min Choi, Shinsuk Park, and Juyoun Park*
+      </p>
+      <p class="venue-full">The IEEE International Conference on Image Processing (IEEE ICIP 2025)</p>
 
-        <!-- 스샷처럼 체크/불릿 스타일로 쓰고 싶으면 이렇게 -->
-        <p style="margin-bottom: 0;">
-          ✔️ Proposed 2D contextual affordance generation system<br>
-        </p>
+      <p class="bullet">
+        <i class="fa fa-check" aria-hidden="true"></i>&nbsp; Proposed 2D contextual affordance generation system.
+      </p>
 
-        <!-- 버튼/링크도 넣고 싶으면 (선택) -->
-        <ul class="actions" style="margin-top: 1.0em;">
-          <!-- PDF/코드/포스터 링크로 교체 -->
-          <li><a class="button" href="https://ieeexplore.ieee.org/document/11084719" target="_blank" rel="noopener">Paper</a></li>
-          <li><a class="button alt" href="/assets/files/250916_ICIP_GKK.pdf" target="_blank" rel="noopener">Poster</a></li>
-        </ul>
+      <div class="pub-actions">
+        <a class="button" href="https://ieeexplore.ieee.org/document/11084719" target="_blank" rel="noopener">
+          <i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;Paper
+        </a>
+        <a class="button alt" href="/assets/files/250916_ICIP_GKK.pdf" target="_blank" rel="noopener">
+          <i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp;Poster
+        </a>
       </div>
-    </article>
+    </div>
+  </article>
 
-    <!-- 항목 더 추가하고 싶으면, 위 <article> ... </article> 블록을 복붙해서 추가하면 됨 -->
-    <!--
-    <article>
-      <a class="image" style="vertical-align: top;">
-        <img src="/assets/images/another.png?v=1" alt="Another" />
-      </a>
-      <div class="inner" style="vertical-align: top;">
-        <h4>...</h4>
-        <p>...</p>
-      </div>
-    </article>
-    -->
-
-  </div>
 </div>

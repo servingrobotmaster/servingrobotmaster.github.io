@@ -1,148 +1,163 @@
 /*
-	Read by Fastbyte01
-	Based on Read Only template released by html5up.
-	Free for personal and commercial use under the CCA 3.0 license
-*/
+ * Geonkuk Kim — site interactions
+ * Vanilla JS: theme toggle, mobile nav, scroll-spy, reveal-on-scroll,
+ *             staged hero "Welcome" word-by-word animation.
+ */
+(function () {
+  'use strict';
 
-(function($) {
+  document.addEventListener('DOMContentLoaded', function () {
+    initThemeToggle();
+    initMobileNav();
+    initScrollSpy();
+    initReveal();
+    initHeroAnimation();
+    initSmoothScroll();
+  });
 
-	skel.breakpoints({
-		xlarge: '(max-width: 1680px)',
-		large: '(max-width: 1280px)',
-		medium: '(max-width: 1024px)',
-		small: '(max-width: 736px)',
-		xsmall: '(max-width: 480px)'
-	});
+  /* ---------- Theme toggle ---------- */
+  function initThemeToggle() {
+    var KEY = 'theme';
+    var body = document.body;
+    var btn = document.getElementById('themeToggle');
+    if (!btn) return;
 
-	$(function() {
+    function apply(mode) {
+      if (mode === 'dark') {
+        body.classList.add('theme-dark');
+        btn.setAttribute('aria-pressed', 'true');
+        btn.setAttribute('title', 'Switch to light mode');
+      } else {
+        body.classList.remove('theme-dark');
+        btn.setAttribute('aria-pressed', 'false');
+        btn.setAttribute('title', 'Switch to dark mode');
+      }
+    }
 
-		var $body = $('body'),
-			$header = $('#header'),
-			$nav = $('#nav'), $nav_a = $nav.find('a'),
-			$wrapper = $('#wrapper');
+    var stored = null;
+    try { stored = localStorage.getItem(KEY); } catch (e) {}
 
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
+    if (stored === 'dark' || stored === 'light') {
+      apply(stored);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      apply('dark');
+    } else {
+      apply('light');
+    }
 
-		// Prioritize "important" elements on medium.
-			skel.on('+medium -medium', function() {
-				$.prioritize(
-					'.important\\28 medium\\29',
-					skel.breakpoint('medium').active
-				);
-			});
+    btn.addEventListener('click', function () {
+      var next = body.classList.contains('theme-dark') ? 'light' : 'dark';
+      apply(next);
+      try { localStorage.setItem(KEY, next); } catch (e) {}
+    });
+  }
 
-		// Header.
-			var ids = [];
+  /* ---------- Mobile nav toggle ---------- */
+  function initMobileNav() {
+    var nav = document.getElementById('topnav');
+    var toggle = document.getElementById('navToggle');
+    if (!nav || !toggle) return;
 
-			// Set up nav items.
-				$nav_a
-					.scrolly({ offset: 44 })
-					.on('click', function(event) {
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('menu-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
 
-						var $this = $(this),
-							href = $this.attr('href');
+    nav.querySelectorAll('.nav-links a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        nav.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 
-						// Not an internal link? Bail.
-							if (href.charAt(0) != '#')
-								return;
+  /* ---------- Scroll spy + nav shadow ---------- */
+  function initScrollSpy() {
+    var nav = document.getElementById('topnav');
+    var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
+    var sections = links
+      .map(function (a) {
+        var id = a.getAttribute('href').slice(1);
+        return { id: id, el: document.getElementById(id), link: a };
+      })
+      .filter(function (s) { return s.el; });
 
-						// Prevent default behavior.
-							event.preventDefault();
+    function onScroll() {
+      if (window.scrollY > 8) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
 
-						// Remove active class from all links and mark them as locked (so scrollzer leaves them alone).
-							$nav_a
-								.removeClass('active')
-								.addClass('scrollzer-locked');
+      var top = window.scrollY + (nav.offsetHeight || 60) + 40;
+      var current = sections[0];
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].el.offsetTop <= top) current = sections[i];
+      }
+      sections.forEach(function (s) {
+        if (s === current) s.link.classList.add('active');
+        else s.link.classList.remove('active');
+      });
+    }
 
-						// Set active class on this link.
-							$this.addClass('active');
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 
-					})
-					.each(function() {
+  /* ---------- Reveal on scroll ---------- */
+  function initReveal() {
+    var items = document.querySelectorAll('.reveal, .section-head');
+    if (!('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-						var $this = $(this),
-							href = $this.attr('href'),
-							id;
+    items.forEach(function (el) { io.observe(el); });
+  }
 
-						// Not an internal link? Bail.
-							if (href.charAt(0) != '#')
-								return;
+  /* ---------- Hero "Welcome..." word-by-word ---------- */
+  function initHeroAnimation() {
+    var el = document.getElementById('heroTitle');
+    if (!el) return;
+    var text = el.getAttribute('data-text') || el.textContent;
+    el.textContent = '';
 
-						// Add to scrollzer ID list.
-							id = href.substring(1);
-							$this.attr('id', id + '-link');
-							ids.push(id);
+    var words = text.split(' ');
+    var gradientIndexes = [];
+    words.forEach(function (w, i) {
+      var lower = w.toLowerCase().replace(/[^a-z]/g, '');
+      if (lower === 'geonkuk' || lower === "kim's" || lower === 'kims') gradientIndexes.push(i);
+    });
 
-					});
+    words.forEach(function (word, i) {
+      var span = document.createElement('span');
+      span.className = 'word' + (gradientIndexes.indexOf(i) !== -1 ? ' gradient' : '');
+      span.textContent = word;
+      span.style.animationDelay = (0.18 * i + 0.25) + 's';
+      el.appendChild(span);
+      if (i < words.length - 1) el.appendChild(document.createTextNode(' '));
+    });
+  }
 
-			// Initialize scrollzer.
-				$.scrollzer(ids, { pad: 300, lastHack: true });
-
-		// Off-Canvas Navigation.
-
-			// Title Bar.
-				$(
-					'<div id="titleBar">' +
-						'<a href="#header" class="toggle"></a>' +
-						'<span class="title">' + $('#logo').html() + '</span>' +
-					'</div>'
-				)
-					.appendTo($body);
-
-			// Header.
-				$('#header')
-					.panel({
-						delay: 500,
-						hideOnClick: true,
-						hideOnSwipe: true,
-						resetScroll: true,
-						resetForms: true,
-						side: 'right',
-						target: $body,
-						visibleClass: 'header-visible'
-					});
-
-			// Fix: Remove navPanel transitions on WP<10 (poor/buggy performance).
-				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
-					$('#titleBar, #header, #wrapper')
-						.css('transition', 'none');
-
-			// Theme toggle.
-				var themeKey = 'theme',
-					$themeToggle = $('#themeToggle');
-
-				if ($themeToggle.length) {
-					var applyTheme = function(mode) {
-						if (mode === 'dark') {
-							$body.addClass('theme-dark');
-							$themeToggle.attr('aria-pressed', 'true');
-							$themeToggle.attr('title', 'Switch to light mode');
-						} else {
-							$body.removeClass('theme-dark');
-							$themeToggle.attr('aria-pressed', 'false');
-							$themeToggle.attr('title', 'Switch to dark mode');
-						}
-					};
-
-					var stored;
-					try { stored = localStorage.getItem(themeKey); } catch (e) {}
-
-					if (stored === 'dark' || stored === 'light') {
-						applyTheme(stored);
-					} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-						applyTheme('dark');
-					} else {
-						applyTheme('light');
-					}
-
-					$themeToggle.on('click', function() {
-						var next = $body.hasClass('theme-dark') ? 'light' : 'dark';
-						applyTheme(next);
-						try { localStorage.setItem(themeKey, next); } catch (e) {}
-					});
-				}
-
-	});
-
-})(jQuery);
+  /* ---------- Smooth scroll offset for fixed nav ---------- */
+  function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var href = a.getAttribute('href');
+        if (href.length < 2) return;
+        var target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        var nav = document.getElementById('topnav');
+        var offset = (nav ? nav.offsetHeight : 0) + 8;
+        var top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      });
+    });
+  }
+})();
